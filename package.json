@@ -1,8 +1,8 @@
 {
-  "name": "desarrollo-frontend-react",
+  "name": "react-examen",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://a1d00.github.io/desarrollo-frontend-react",
+  "homepage": "https://a1d00.github.io/react-examen",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
