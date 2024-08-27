@@ -20,8 +20,6 @@ jobs:
           node-version: 20
       - name: Install Dependencies
         run: npm i
-      - name: Lint Project
-        run: npm install react-scripts --save
       - name: Build Project
         run: npm run build
       - name: Upload artifacts
