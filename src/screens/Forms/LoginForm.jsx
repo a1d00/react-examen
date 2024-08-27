@@ -7,7 +7,7 @@ import ModalLogOut from "../../components/modalLogOut";
 import { useState } from "react";
 
 const LoginForm = () => {
-    const [values, handleChange] = useForm({ username: '', email: '', password: '' });
+    const [values, handleChange, resetForm] = useForm({ username: '', email: '', password: '' });
     const [showModalInfo, setShowModalInfo] = useState(false);
     const [showModalInfo2, setShowModalInfo2] = useState(false);
     const [ShowModalLogOut, setShowModalLogOut] = useState(false);
@@ -18,7 +18,7 @@ const LoginForm = () => {
     console.log(form.password);
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+     // event.preventDefault();
         console.log(values);
         dispatch(saveFormData(values));
     }
@@ -35,7 +35,7 @@ const LoginForm = () => {
         setShowModalLogOut(true);
     }
 
-    const login = () => {
+    const login =async (event) => {
         //dispatch(saveFormData(values));
         console.log(values.password);
         const pass = values.password;
@@ -44,8 +44,7 @@ const LoginForm = () => {
             console.log(values);
             dispatch(saveFormData(values));
             setShowModalInfo(true);
-            
-
+            resetForm();
         }
         else {
             event.preventDefault(); 
@@ -60,7 +59,9 @@ const LoginForm = () => {
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
     };
-    
+    const cerrar = () => {
+        console.log("Cerrando");
+    }
     const handleLogout = () => {
         
         //event.preventDefault();
